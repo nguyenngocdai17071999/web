@@ -1,0 +1,68 @@
+﻿@model IEnumerable<TLCN_WEB.Models.Dish>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dish_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishPicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DishType_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Menu_ID)
+        </th>
+   
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dish_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DishName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DishPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DishPicture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DishType_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Menu_ID)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Dish_ID }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.Dish_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Dish_ID })
+            </td>
+        </tr>
+    }
+
+</table>
+

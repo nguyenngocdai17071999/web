@@ -1,0 +1,99 @@
+﻿@model IEnumerable<TLCN_WEB.Models.Store>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StorePicture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLoseTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProvinceID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.MenuID)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BusinessTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RatePoint)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.StoreID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StoreAddress)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StoreName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StorePicture)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.OpenTime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CLoseTime)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ProvinceID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MenuID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BusinessTypeID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.RatePoint)
+    </td>
+
+
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.StoreID }) |
+        @Html.ActionLink("Detail", "Detail", new { id = item.StoreID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.StoreID })
+    </td>
+</tr>
+    }
+
+</table>
+

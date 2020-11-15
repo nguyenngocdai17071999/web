@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLCN_WEB", "TLCN_WEB\TLCN_WEB.csproj", "{C2C04E5A-91BB-4E25-8238-AC8A951F1978}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C04E5A-91BB-4E25-8238-AC8A951F1978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C04E5A-91BB-4E25-8238-AC8A951F1978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C04E5A-91BB-4E25-8238-AC8A951F1978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C04E5A-91BB-4E25-8238-AC8A951F1978}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2214F81-04E8-4FEC-ABC6-8DD16CAC9AD5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,73 @@
+﻿@model IEnumerable<TLCN_WEB.Models.Comment>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CommentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StoreID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParentComment_ID)
+        </th>     
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommentID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StoreID)
+            </td>
+                        <td>
+                @Html.DisplayFor(modelItem => item.ParentComment_ID)
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.CommentID }) |
+                @Html.ActionLink("Detail", "Detail", new { id = item.CommentID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CommentID })
+            </td>
+        </tr>
+    }
+
+</table>
+

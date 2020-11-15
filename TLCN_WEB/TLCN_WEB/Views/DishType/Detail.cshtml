@@ -1,0 +1,36 @@
+﻿@model TLCN_WEB.Models.DishType
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DishType_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishType_ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DishyTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DishyTypeName)
+        </dd>
+        
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DishType_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
